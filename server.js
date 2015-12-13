@@ -77,7 +77,7 @@
         });
     });
 
-    /*              application             */
+    /*              Adding route for front end application             */
     app.get('*', function(req, res) {
         res.sendfile('./public/index.html'); // load the index.html file
     });
