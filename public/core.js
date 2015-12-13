@@ -1,7 +1,7 @@
 
 var To_do = angular.module('To_do', []);
 
-function mainController($scope, $http) {
+function main($scope, $http) {
     $scope.formData = {};
 
     /*          display the list of To-dos when loading the page        */
