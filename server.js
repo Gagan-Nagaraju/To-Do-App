@@ -76,3 +76,13 @@
             });
         });
     });
+
+    /*              application             */
+    app.get('*', function(req, res) {
+        res.sendfile('./public/index.html'); // load the index.html file
+    });
+
+
+    /*               listen on port 8080 (start server.js)               */
+    app.listen(8080);
+    console.log("App listening on port 8080");
