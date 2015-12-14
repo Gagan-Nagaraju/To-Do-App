@@ -12,12 +12,12 @@ Node.js and Express are used to build the API that is called by the AngularJS to
 MongoDB is installed on the local machine and it is used for our application. Other platforms such as EC2, Modulus, etc
 can also be used to host the Database as well as the application.
 
-Set-Up:
+#Set-Up:
 1. Node.js has to be installed on the machine.
 2. NPM has to be installed as well. But it will be installed along with Node.js in most of the cases.
 3. MongoDB has to be installed on the local machine.
 
-Steps to run the app (I have used Ubuntu as my platform):
+#Steps to run the app (I have used Ubuntu as my platform):
 1. Clone this repository into the local machine.
 2. use npm install command to install the dependencies specified in the package.json file
 3. Start the MongoDB server on the local machine by opening a terminal and typing: sudo service mongod start
@@ -26,7 +26,7 @@ Steps to run the app (I have used Ubuntu as my platform):
 6. Open the web browser and redirect to localhost:8001 and you should see the application running. The application runs as long
 as the MongoDB server and the server.js are both running.
 
-Files contained in the repo:
+#Files contained in the repo:
 1. package.json - Contains the list of dependencies that are installed when npm install is typed.
 2. server.js - The main code for our node application. 
 3. public directory contains two files: core.js and index.html
