@@ -10,7 +10,7 @@
 
     /*               configuration          */
 
-    mongoose.connect('mongodb://<user>:<pass>@apollo.modulusmongo.net:27017/zyn4oTuj'); // connect to mongoDB database
+    mongoose.connect('mongodb://gagan:gagannag@apollo.modulusmongo.net:27017/zyn4oTuj'); // connect to mongoDB database
 
     app.use(express.static(__dirname + '/public'));                 
     app.use(morgan('dev'));                                         
