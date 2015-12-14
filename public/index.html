@@ -27,22 +27,23 @@
 <body ng-controller="mainController">
     <div class="container">
 
-        <!-- Title mesage -->
+        <!-- Title -->
         <div class="jumbotron text-center">
-            <h1>Welcome to your list of To-dos<span class="label label-info">{{ todos.length }}</span></h1>
+            <h1>Welcome to your list of To-dos</h1> 
         </div>
 
         <!-- The lits of to-dos -->
         <div id="todo-list" class="row">
-            <div class="col-sm-4 col-sm-offset-4">
+            <div class="col-sm-3 col-sm-offset-3">
 
                 <!-- Create the view for the to-dos by looping through the scope.todos -->
-                <div class="checkbox" ng-repeat="todo in todos">
-                    <label>
-                        <input type="checkbox" ng-click="deleteTodo(todo._id)"> {{ todo.text }}
-                    </label>
-                </div>
+                <div class="button" ng-repeat="todo in todos">
 
+                    <label>
+                        <input type="button" value="Delete" ng-click="deleteTodo(todo._id)"> {{ todo.text }}
+                    </label>
+
+                </div>
             </div>
         </div>
 

@@ -1,17 +1,16 @@
-// server.js
 
     /*               set up                */
     var express  = require('express');
     var app      = express();                               // create the app
     var mongoose = require('mongoose');                     // Mongo DB
-    var port     = process.env.PORT || 8001;                // set the port
+    var port     = process.env.PORT || 8001;                // port 
     var morgan = require('morgan');                         // log requests to the console
     var bodyParser = require('body-parser');                // parse the req body
-    var methodOverride = require('method-override');        // simulate DELETE and PUT 
+    var methodOverride = require('method-override');        // for DELETE and PUT 
 
     /*               configuration          */
 
-    mongoose.connect('mongodb://localhost');
+    mongoose.connect('mongodb://localhost');                // connecting to the MongoDB running locally at port 27017
 
     app.use(express.static(__dirname + '/public'));                 
     app.use(morgan('dev'));                                         
@@ -86,7 +85,7 @@
     });
 
 
-    /*               listen on port 8080 (start server.js)               */
+    /*               server listening on port 8001               */
     app.listen(port);
     console.log("App listening on port " + port);
-   // console.log("This is my mongoDB latest");
+   // console.log("This is my mongoDB");
