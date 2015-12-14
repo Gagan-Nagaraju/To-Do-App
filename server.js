@@ -4,13 +4,14 @@
     var express  = require('express');
     var app      = express();                               // create the app
     var mongoose = require('mongoose');                     // Mongo DB
+    var port     = process.env.PORT || 8001;                // set the port
     var morgan = require('morgan');                         // log requests to the console
     var bodyParser = require('body-parser');                // parse the req body
     var methodOverride = require('method-override');        // simulate DELETE and PUT 
 
     /*               configuration          */
 
-    mongoose.connect('mongodb://gagan:gagannag@apollo.modulusmongo.net:27017/zyn4oTuj'); // connect to mongoDB database
+    mongoose.connect('mongodb://localhost');
 
     app.use(express.static(__dirname + '/public'));                 
     app.use(morgan('dev'));                                         
@@ -20,8 +21,10 @@
     app.use(methodOverride());
 
     /*               Define model           */
+
     var Todo = mongoose.model('Todo', {
-    text : String
+        text : String,
+        done : Boolean
     });
 
     /*                   Creating API routes                 */
@@ -84,5 +87,6 @@
 
 
     /*               listen on port 8080 (start server.js)               */
-    app.listen(8080);
-    console.log("App listening on port 8080");
+    app.listen(port);
+    console.log("App listening on port " + port);
+   // console.log("This is my mongoDB latest");
